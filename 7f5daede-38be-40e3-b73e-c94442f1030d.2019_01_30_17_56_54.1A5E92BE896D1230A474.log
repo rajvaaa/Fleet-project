@@ -1,0 +1,685 @@
+﻿2019-01-30 17:56:54      Execution started.
+2019-01-30 17:56:54      Qlik Sense Server Version     12.145.3
+2019-01-30 17:56:54      CPU Target                    x64
+2019-01-30 17:56:54      Operating System              Windows Server 2012 R2 Standard  (64 bit edition)
+2019-01-30 17:56:54      Wow64 mode                    Not using Wow64
+2019-01-30 17:56:54      Language                      0409 English English
+2019-01-30 17:56:54      Country                       USA United States United States
+2019-01-30 17:56:54      MDAC Version                  6.3.9600.16384
+2019-01-30 17:56:54      MDAC Full Install Version     6.3.9600.16384
+2019-01-30 17:56:54      PreferredCompression          2
+2019-01-30 17:56:54      EnableParallelReload          1
+2019-01-30 17:56:54      ParallelizeQvdLoads           1
+2019-01-30 17:56:54      EnableFlushLog                0
+2019-01-30 17:56:54      UserLogfileCharset            65001
+2019-01-30 17:56:54      OdbcLoginTimeout              -1
+2019-01-30 17:56:54      OdbcConnectionTimeout         -1
+2019-01-30 17:56:54      LongestPossibleLine           1048576
+2019-01-30 17:56:54      ScriptWantsDbWrite            false
+2019-01-30 17:56:54      ScriptWantsExe                false
+2019-01-30 17:56:54      ICU_FOR_CHARACTER_CLASSIFICATION true
+2019-01-30 17:56:54      ICU_FOR_CODE_PAGES            true
+2019-01-30 17:56:54      ICU_FOR_COLLATION             true
+2019-01-30 17:56:54      ICU_FOR_LOCALE_INFO           true
+2019-01-30 17:56:54      ICU_FOR_SUPPORT_INFO          true
+2019-01-30 17:56:54      ICU_FOR_TIME_ZONE_INFO        true
+2019-01-30 17:56:54      LogFile CodePage Used:        65001
+2019-01-30 17:56:54      UseMemoryFillPattern          1
+2019-01-30 17:56:54      ScriptMode                    Standard (limits system access)
+2019-01-30 17:56:54      SequentialThreadCount         50
+2019-01-30 17:56:54      NumberOfCores (effective)     16
+2019-01-30 17:56:54      ReloadCodebase                Bnf
+2019-01-30 17:56:54      Reload Executed By            UserDirectory=INTERNAL; UserId=sa_scheduler
+2019-01-30 17:56:54      Process Executing             Qlik Sense Server
+2019-01-30 17:56:54      Process ID                    6372
+2019-01-30 17:56:54      Grpc version                  5.0.0
+2019-01-30 17:56:54      Protobuf version              3.4.0
+2019-01-30 17:56:55 0002 SET ThousandSep=','
+2019-01-30 17:56:55 0003 SET DecimalSep='.'
+2019-01-30 17:56:55 0004 SET MoneyThousandSep=','
+2019-01-30 17:56:55 0005 SET MoneyDecimalSep='.'
+2019-01-30 17:56:55 0006 SET MoneyFormat='$#,##0.00;-$#,##0.00'
+2019-01-30 17:56:55 0007 SET TimeFormat='h:mm:ss TT'
+2019-01-30 17:56:55 0008 SET DateFormat='M/D/YYYY'
+2019-01-30 17:56:55 0009 SET TimestampFormat='M/D/YYYY h:mm:ss[.fff] TT'
+2019-01-30 17:56:55 0010 SET FirstWeekDay=6
+2019-01-30 17:56:55 0011 SET BrokenWeeks=1
+2019-01-30 17:56:55 0012 SET ReferenceDay=0
+2019-01-30 17:56:55 0013 SET FirstMonthOfYear=1
+2019-01-30 17:56:55 0014 SET CollationLocale='en-US'
+2019-01-30 17:56:55 0015 SET CreateSearchIndexOnReload=1
+2019-01-30 17:56:55 0016 SET MonthNames='Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec'
+2019-01-30 17:56:55 0017 SET LongMonthNames='January;February;March;April;May;June;July;August;September;October;November;December'
+2019-01-30 17:56:55 0018 SET DayNames='Mon;Tue;Wed;Thu;Fri;Sat;Sun'
+2019-01-30 17:56:55 0019 SET LongDayNames='Monday;Tuesday;Wednesday;Thursday;Friday;Saturday;Sunday'
+2019-01-30 17:56:55 0020 SET NumericalAbbreviation='3:k;6:M;9:G;12:T;15:P;18:E;21:Z;24:Y;-3:m;-6:μ;-9:n;-12:p;-15:f;-18:a;-21:z;-24:y'
+2019-01-30 17:56:55 0025 Security_Table:
+2019-01-30 17:56:55 0026 Load  'USER' as ACCESS,
+2019-01-30 17:56:55 0027      'REPSRV\' & UPPER(Employee_Network_User_ID) as USERID,
+2019-01-30 17:56:55 0028     Security_Level,
+2019-01-30 17:56:55 0029     Div_SK as REDUCTION 
+2019-01-30 17:56:55 0030 FROM [lib://Qlik_QVD_Files/STG_Sec_Emp_to_Div.qvd]
+2019-01-30 17:56:55 0031 (qvd)
+2019-01-30 17:56:55 0032 where Security_Area='OPERATIONS'
+2019-01-30 17:56:56      	4 fields found: ACCESS, USERID, Security_Level, REDUCTION, 
+2019-01-30 17:56:56      1,045,999 lines fetched
+2019-01-30 17:56:56 0034 SECTION ACCESS
+2019-01-30 17:56:56 0035 NoConcatenate
+2019-01-30 17:56:56 0036 Load 
+2019-01-30 17:56:56 0037     ACCESS,
+2019-01-30 17:56:56 0038     USERID,
+2019-01-30 17:56:56 0039     REDUCTION 
+2019-01-30 17:56:56 0040 RESIDENT Security_Table
+2019-01-30 17:56:57      	3 fields found: ACCESS, USERID, REDUCTION, 
+2019-01-30 17:56:57      1,045,999 lines fetched
+2019-01-30 17:56:57 0042 SECTION APPLICATION
+2019-01-30 17:56:57 0044 AllUnits:
+2019-01-30 17:56:57 0045 LOAD distinct *
+2019-01-30 17:56:57 0046 LOAD
+2019-01-30 17:56:57 0047     UNITID,
+2019-01-30 17:56:57 0048     SiteID,
+2019-01-30 17:56:57 0049     Category,
+2019-01-30 17:56:57 0050     
+2019-01-30 17:56:57 0051     UStatus,
+2019-01-30 17:56:57 0052     %Calendar_Key,
+2019-01-30 17:56:57 0053     Cur_Div_Nbr,
+2019-01-30 17:56:57 0054     Cur_LOB,
+2019-01-30 17:56:57 0055     Dossier_LOB,
+2019-01-30 17:56:57 0056     if(LEFT(Cur_LOB,3) >= '100' and LEFT(Cur_LOB,3) <= '199', 'Large Container', 
+2019-01-30 17:56:57 0057       if(LEFT(Cur_LOB,3) >= '200' and LEFT(Cur_LOB,3) <= '299', 'Small Container',
+2019-01-30 17:56:57 0058           if(LEFT(Cur_LOB,3) >= '300' and LEFT(Cur_LOB,3) <= '399', 'Residential', 
+2019-01-30 17:56:57 0059               if(LEFT(Cur_LOB,3) >= '400' and LEFT(Cur_LOB,3) <= '499', 'Other',
+2019-01-30 17:56:57 0060                   if(LEFT(Cur_LOB,3) >= '600' and LEFT(Cur_LOB,3) <= '619', 'Landfill', 
+2019-01-30 17:56:57 0061                       if(LEFT(Cur_LOB,3) >= '620' and LEFT(Cur_LOB,3) <= '629', 'Transfer Station',
+2019-01-30 17:56:57 0062                               if(LEFT(Cur_LOB,3) >= '640' and LEFT(Cur_LOB,3) <= '649', 'MRF',
+2019-01-30 17:56:57 0063                                     if(LEFT(Cur_LOB,3) >= '660' and LEFT(Cur_LOB,3) <= '675', 'Energy Services',
+2019-01-30 17:56:57 0064                                             if(LEFT(Cur_LOB,3) >= '680' and LEFT(Cur_LOB,3) <= '689', 'Non-Core',
+2019-01-30 17:56:57 0065                                                   if(LEFT(Cur_LOB,3) >= '700' and LEFT(Cur_LOB,3) <= '709', 'Unit Shop',
+2019-01-30 17:56:57 0066                                                       if(LEFT(Cur_LOB,3) >= '710' and LEFT(Cur_LOB,3) <= '719', 'Container Shop',
+2019-01-30 17:56:57 0067                                                           if(LEFT(Cur_LOB,3) >= '740' and LEFT(Cur_LOB,3) <= '749', 'Supervisory',
+2019-01-30 17:56:57 0068                                                                if(LEFT(Cur_LOB,3) >= '830' and LEFT(Cur_LOB,3) <= '855', 'Administrative'))))))))))))) as LOB
+2019-01-30 17:56:57 0069 FROM [Lib://Qlik_QVD_Files/Reusable QVD Files\E_Monthly_Fleet.qvd] 
+2019-01-30 17:56:57 0070 (qvd)
+2019-01-30 17:56:57      	9 fields found: UNITID, SiteID, Category, UStatus, %Calendar_Key, Cur_Div_Nbr, Cur_LOB, Dossier_LOB, LOB, 
+2019-01-30 17:56:57      44,481 lines fetched
+2019-01-30 17:56:57 0074 TotalFleet_Temp:
+2019-01-30 17:56:57 0075 LOAD
+2019-01-30 17:56:57 0076     Count(UNITID) as TruckCount,
+2019-01-30 17:56:57 0077     UNITID,
+2019-01-30 17:56:57 0078     SiteID,
+2019-01-30 17:56:57 0079     Category,
+2019-01-30 17:56:57 0080     UStatus,
+2019-01-30 17:56:57 0081     Cur_Div_Nbr,
+2019-01-30 17:56:57 0082     LOB,
+2019-01-30 17:56:57 0083     Dossier_LOB,
+2019-01-30 17:56:57 0084     Cur_LOB
+2019-01-30 17:56:57 0085     
+2019-01-30 17:56:57 0086 Resident AllUnits
+2019-01-30 17:56:57 0087 where wildmatch(LOB ,'Large Container','Small Container','Residential','Other')
+2019-01-30 17:56:57 0088   and wildmatch(Category ,'ASL','Brush Truck','CSL','FEL','MSL','Recycle','REL','R/O','Tractor- 5th Wheel')
+2019-01-30 17:56:57 0089   and wildmatch(%Calendar_Key, num(Date#(MonthEnd(AddMonths(today(), -1)),'M/D/YYYY')))
+2019-01-30 17:56:57 0090 Group By 
+2019-01-30 17:56:57 0091       UNITID,
+2019-01-30 17:56:57 0092       SiteID,
+2019-01-30 17:56:57 0093       UStatus,
+2019-01-30 17:56:57 0094       Category,
+2019-01-30 17:56:57 0095       Cur_Div_Nbr,
+2019-01-30 17:56:57 0096       Dossier_LOB,
+2019-01-30 17:56:57 0097       Cur_LOB,
+2019-01-30 17:56:57 0098       LOB
+2019-01-30 17:56:58      	9 fields found: TruckCount, UNITID, SiteID, Category, UStatus, Cur_Div_Nbr, LOB, Dossier_LOB, Cur_LOB, 
+2019-01-30 17:56:58      16,121 lines fetched
+2019-01-30 17:56:58 0101 JOIN(TotalFleet_Temp)
+2019-01-30 17:56:58 0102 
+2019-01-30 17:56:58 0103 LOAD
+2019-01-30 17:56:58 0104     %Calendar_Key
+2019-01-30 17:56:58 0105 FROM [lib://Qlik_QVD_Files/Calendar.qvd]
+2019-01-30 17:56:58 0106 (qvd)
+2019-01-30 17:56:58 0107 WHERE [%Calendar_Key] = num(Date#(MonthEnd(AddMonths(today(), -1)),'M/D/YYYY')) 
+2019-01-30 17:56:58 0108   OR  [%Calendar_Key] = num(Date#(MonthEnd(AddMonths(today(), -2)),'M/D/YYYY'))
+2019-01-30 17:56:58 0109   OR  [%Calendar_Key] = num(Date#(MonthEnd(AddMonths(today(), -3)),'M/D/YYYY'))
+2019-01-30 17:56:58 0110   OR  [%Calendar_Key] = num(Date#(MonthEnd(AddMonths(today(), -4)),'M/D/YYYY'))
+2019-01-30 17:56:58 0111   OR  [%Calendar_Key] = num(Date#(MonthEnd(AddMonths(today(), -5)),'M/D/YYYY'))
+2019-01-30 17:56:58 0112   OR  [%Calendar_Key] = num(Date#(MonthEnd(AddMonths(today(), -6)),'M/D/YYYY'))
+2019-01-30 17:56:58 0113   OR  [%Calendar_Key] = num(Date#(MonthEnd(AddMonths(today(), -7)),'M/D/YYYY'))
+2019-01-30 17:56:58 0114   OR  [%Calendar_Key] = num(Date#(MonthEnd(AddMonths(today(), -8)),'M/D/YYYY'))
+2019-01-30 17:56:58 0115   OR  [%Calendar_Key] = num(Date#(MonthEnd(AddMonths(today(), -9)),'M/D/YYYY'))
+2019-01-30 17:56:58 0116   OR  [%Calendar_Key] = num(Date#(MonthEnd(AddMonths(today(), -10)),'M/D/YYYY'))
+2019-01-30 17:56:58 0117   OR  [%Calendar_Key] = num(Date#(MonthEnd(AddMonths(today(), -11)),'M/D/YYYY')) 
+2019-01-30 17:56:58 0118   OR [%Calendar_Key] = num(Date#(MonthEnd(AddMonths(today(), -12)),'M/D/YYYY'))
+2019-01-30 17:56:58      	1 fields found: %Calendar_Key, 
+2019-01-30 17:56:58      12 lines fetched
+2019-01-30 17:56:58      Joining/Keeping
+2019-01-30 17:56:58 0121 LEFT JOIN(TotalFleet_Temp)
+2019-01-30 17:56:58 0122 
+2019-01-30 17:56:58 0123 LOAD
+2019-01-30 17:56:58 0124      UNITID,
+2019-01-30 17:56:58 0125      num(Date#(MonthEnd(READINGDATE))) as %Calendar_Key,
+2019-01-30 17:56:58 0126      SUM(ENGINEHOURS) as Sum_EngHrs
+2019-01-30 17:56:58 0127 FROM Lib://Qlik_QVD_Files/Reusable QVD Files/E_Fact_EngineHours.qvd 
+2019-01-30 17:56:58 0128 (qvd)
+2019-01-30 17:56:58 0129 WHERE num(Date#(MonthEnd(READINGDATE))) <= num(Date#(MonthEnd(AddMonths(today(), -1)),'M/D/YYYY'))
+2019-01-30 17:56:58 0130 GROUP by UNITID,MonthEnd(READINGDATE)
+2019-01-30 17:57:20      	3 fields found: UNITID, %Calendar_Key, Sum_EngHrs, 
+2019-01-30 17:57:20      247,304 lines fetched
+2019-01-30 17:57:20      Joining/Keeping
+2019-01-30 17:57:21 0154 Fact_Table_Temp:
+2019-01-30 17:57:21 0155 LOAD %Calendar_Key,
+2019-01-30 17:57:21 0156      UNITID,
+2019-01-30 17:57:21 0157      IF(IsNull(Sum_EngHrs) or Sum_EngHrs = 0 or Sum_EngHrs<0 ,'Not Active ',               
+2019-01-30 17:57:21 0158                IF(Sum_EngHrs > 0 and Sum_EngHrs <=125,'Part Time',
+2019-01-30 17:57:21 0159                IF(Sum_EngHrs > 125 and Sum_EngHrs <=750,'Active','Possible Error'))) as CalculatedStatus,
+2019-01-30 17:57:21 0160      IF(IsNull(Sum_EngHrs) OR Sum_EngHrs<0 ,0,Sum_EngHrs) as ENGHRS,
+2019-01-30 17:57:21 0161      UStatus,
+2019-01-30 17:57:21 0162      Category,
+2019-01-30 17:57:21 0163      TruckCount,
+2019-01-30 17:57:21 0164      SiteID,
+2019-01-30 17:57:21 0165      Cur_Div_Nbr,
+2019-01-30 17:57:21 0166      LOB,
+2019-01-30 17:57:21 0167      Dossier_LOB,
+2019-01-30 17:57:21 0168      Cur_LOB
+2019-01-30 17:57:21 0169     
+2019-01-30 17:57:21 0170   
+2019-01-30 17:57:21 0171 Resident TotalFleet_Temp
+2019-01-30 17:57:21      	12 fields found: %Calendar_Key, UNITID, CalculatedStatus, ENGHRS, UStatus, Category, TruckCount, SiteID, Cur_Div_Nbr, LOB, Dossier_LOB, Cur_LOB, 
+2019-01-30 17:57:21      193,452 lines fetched
+2019-01-30 17:57:21 0172 DROP table TotalFleet_Temp
+2019-01-30 17:57:21 0174 Fact_Table:
+2019-01-30 17:57:21 0175 LOAD distinct *
+2019-01-30 17:57:21 0176 LOAD 'TotalFleetStatus' as Fact_Type,
+2019-01-30 17:57:21 0177      'Total Co Fleet' as FleetStatus_Total,
+2019-01-30 17:57:21 0178      %Calendar_Key,
+2019-01-30 17:57:21 0179      UNITID,
+2019-01-30 17:57:21 0180      CalculatedStatus,
+2019-01-30 17:57:21 0181      ENGHRS,
+2019-01-30 17:57:21 0182      UStatus,
+2019-01-30 17:57:21 0183      Category,
+2019-01-30 17:57:21 0184      TruckCount,
+2019-01-30 17:57:21 0185      SiteID,
+2019-01-30 17:57:21 0186      Cur_Div_Nbr,
+2019-01-30 17:57:21 0187      LOB,
+2019-01-30 17:57:21 0188      Dossier_LOB,
+2019-01-30 17:57:21 0189      Cur_LOB
+2019-01-30 17:57:21 0190   
+2019-01-30 17:57:21 0191  
+2019-01-30 17:57:21 0192 Resident Fact_Table_Temp
+2019-01-30 17:57:21      	14 fields found: Fact_Type, FleetStatus_Total, %Calendar_Key, UNITID, CalculatedStatus, ENGHRS, UStatus, Category, TruckCount, SiteID, Cur_Div_Nbr, LOB, Dossier_LOB, Cur_LOB, 
+2019-01-30 17:57:21      193,452 lines fetched
+2019-01-30 17:57:21 0193 Drop table Fact_Table_Temp
+2019-01-30 17:57:21 0195 Fact_Table_Temp:
+2019-01-30 17:57:21 0196 LOAD
+2019-01-30 17:57:21 0197     Count(UNITID) as TruckCount,
+2019-01-30 17:57:21 0198     UNITID,
+2019-01-30 17:57:21 0199     SiteID,
+2019-01-30 17:57:21 0200     Category,
+2019-01-30 17:57:21 0201     UStatus,
+2019-01-30 17:57:21 0202     Cur_Div_Nbr,
+2019-01-30 17:57:21 0203     LOB,
+2019-01-30 17:57:21 0204     Dossier_LOB,
+2019-01-30 17:57:21 0205     Cur_LOB
+2019-01-30 17:57:21 0206 Resident AllUnits
+2019-01-30 17:57:21 0207 where wildmatch(Category ,'Articulated Dump','Backhoe','Dirt Compactor','Excavator','Farm Tractor','Forklift','Motor Grader','Motor Scraper','Off Hwy Dump','Skid Steer',
+2019-01-30 17:57:21 0208                           'Tarper','Tipper','Top Pick','Towed Scraper','Track Dozer Dirt','Track Dozer Face', 'Track Type Loader','Tractor-Farm','Trash Compactor',
+2019-01-30 17:57:21 0209                           'Water Truck','Wheel Loader','Landfill Compactor')
+2019-01-30 17:57:21 0210 and wildmatch(UStatus ,'PC-Backup','PC-Frontline','PC-Mothballed','PC-Salvage','PC-Seasonal','PC-Support')
+2019-01-30 17:57:21 0211   and wildmatch(%Calendar_Key, num(Date#(MonthEnd(AddMonths(today(), -1)),'M/D/YYYY')))
+2019-01-30 17:57:21 0212 Group By 
+2019-01-30 17:57:21 0213       UNITID,
+2019-01-30 17:57:21 0214       SiteID,
+2019-01-30 17:57:21 0215       UStatus,
+2019-01-30 17:57:21 0216       Category,
+2019-01-30 17:57:21 0217       Cur_Div_Nbr,
+2019-01-30 17:57:21 0218       Cur_LOB,
+2019-01-30 17:57:21 0219       Dossier_LOB,
+2019-01-30 17:57:21 0220       LOB
+2019-01-30 17:57:21      	9 fields found: TruckCount, UNITID, SiteID, Category, UStatus, Cur_Div_Nbr, LOB, Dossier_LOB, Cur_LOB, 
+2019-01-30 17:57:21      3,421 lines fetched
+2019-01-30 17:57:21 0222 JOIN(Fact_Table_Temp)
+2019-01-30 17:57:21 0223 
+2019-01-30 17:57:21 0224 LOAD
+2019-01-30 17:57:21 0225     %Calendar_Key
+2019-01-30 17:57:21 0226 FROM [lib://Qlik_QVD_Files/Calendar.qvd]
+2019-01-30 17:57:21 0227 (qvd)
+2019-01-30 17:57:21 0228 WHERE [%Calendar_Key] = num(Date#(MonthEnd(AddMonths(today(), -1)),'M/D/YYYY')) 
+2019-01-30 17:57:21 0229   OR  [%Calendar_Key] = num(Date#(MonthEnd(AddMonths(today(), -2)),'M/D/YYYY'))
+2019-01-30 17:57:21 0230   OR  [%Calendar_Key] = num(Date#(MonthEnd(AddMonths(today(), -3)),'M/D/YYYY'))
+2019-01-30 17:57:21 0231   OR  [%Calendar_Key] = num(Date#(MonthEnd(AddMonths(today(), -4)),'M/D/YYYY'))
+2019-01-30 17:57:21 0232   OR  [%Calendar_Key] = num(Date#(MonthEnd(AddMonths(today(), -5)),'M/D/YYYY'))
+2019-01-30 17:57:21 0233   OR  [%Calendar_Key] = num(Date#(MonthEnd(AddMonths(today(), -6)),'M/D/YYYY'))
+2019-01-30 17:57:21 0234   OR  [%Calendar_Key] = num(Date#(MonthEnd(AddMonths(today(), -7)),'M/D/YYYY'))
+2019-01-30 17:57:21 0235   OR  [%Calendar_Key] = num(Date#(MonthEnd(AddMonths(today(), -8)),'M/D/YYYY'))
+2019-01-30 17:57:21 0236   OR  [%Calendar_Key] = num(Date#(MonthEnd(AddMonths(today(), -9)),'M/D/YYYY'))
+2019-01-30 17:57:21 0237   OR  [%Calendar_Key] = num(Date#(MonthEnd(AddMonths(today(), -10)),'M/D/YYYY'))
+2019-01-30 17:57:21 0238   OR  [%Calendar_Key] = num(Date#(MonthEnd(AddMonths(today(), -11)),'M/D/YYYY')) 
+2019-01-30 17:57:21 0239   OR [%Calendar_Key] = num(Date#(MonthEnd(AddMonths(today(), -12)),'M/D/YYYY'))
+2019-01-30 17:57:21      	1 fields found: %Calendar_Key, 
+2019-01-30 17:57:21      12 lines fetched
+2019-01-30 17:57:21      Joining/Keeping
+2019-01-30 17:57:21 0242 LEFT JOIN(Fact_Table_Temp)
+2019-01-30 17:57:21 0243 
+2019-01-30 17:57:21 0244 LOAD
+2019-01-30 17:57:21 0245      UNITID,
+2019-01-30 17:57:21 0246      num(Date#(MonthEnd(READINGDATE))) as %Calendar_Key,
+2019-01-30 17:57:21 0247      SUM(ENGINEHOURS) as Sum_EngHrs
+2019-01-30 17:57:21 0248 FROM Lib://Qlik_QVD_Files/Reusable QVD Files/E_Fact_EngineHours.qvd 
+2019-01-30 17:57:21 0249 (qvd)
+2019-01-30 17:57:21 0250 WHERE num(Date#(MonthEnd(READINGDATE))) <= num(Date#(MonthEnd(AddMonths(today(), -1)),'M/D/YYYY'))
+2019-01-30 17:57:21 0251   AND IS_VALID =1
+2019-01-30 17:57:21 0252 GROUP by UNITID,MonthEnd(READINGDATE)
+2019-01-30 17:57:44      	3 fields found: UNITID, %Calendar_Key, Sum_EngHrs, 
+2019-01-30 17:57:44      247,176 lines fetched
+2019-01-30 17:57:44      Joining/Keeping
+2019-01-30 17:57:44 0268 Concatenate(Fact_Table)
+2019-01-30 17:57:44 0269 LOAD distinct
+2019-01-30 17:57:44 0270     'HeavyEquipment' as Fact_Type,
+2019-01-30 17:57:44 0271     'Heavy Equipment' as FleetStatus_HE,
+2019-01-30 17:57:44 0272     [%Calendar_Key],
+2019-01-30 17:57:44 0273     UNITID,
+2019-01-30 17:57:44 0274     IF(IsNull(Sum_EngHrs) OR Sum_EngHrs<0 ,0,Sum_EngHrs) as ENGHRS,  
+2019-01-30 17:57:44 0275     Category,
+2019-01-30 17:57:44 0276     TruckCount,
+2019-01-30 17:57:44 0277     SiteID,
+2019-01-30 17:57:44 0278     LOB,
+2019-01-30 17:57:44 0279     Dossier_LOB,
+2019-01-30 17:57:44 0280     Cur_LOB,
+2019-01-30 17:57:44 0281     UStatus,
+2019-01-30 17:57:44 0282     Cur_Div_Nbr
+2019-01-30 17:57:44 0283    
+2019-01-30 17:57:44 0284 
+2019-01-30 17:57:44 0285 Resident Fact_Table_Temp
+2019-01-30 17:57:44      	13 fields found: Fact_Type, FleetStatus_HE, %Calendar_Key, UNITID, ENGHRS, Category, TruckCount, SiteID, LOB, Dossier_LOB, Cur_LOB, UStatus, Cur_Div_Nbr, 
+2019-01-30 17:57:44      234,504 lines fetched
+2019-01-30 17:57:44 0287 DROP table Fact_Table_Temp
+2019-01-30 17:57:44 0296 ToBeSold_Units:
+2019-01-30 17:57:44 0297 LOAD
+2019-01-30 17:57:44 0298     UNITID,
+2019-01-30 17:57:44 0299     MIN(%Calendar_Key) AS LoadDate
+2019-01-30 17:57:44 0300 Resident AllUnits
+2019-01-30 17:57:44 0301 WHERE [%Calendar_Key] < num(Date#(MonthEnd(AddMonths(Today(),-1))))  
+2019-01-30 17:57:44 0302   and wildmatch(UStatus ,'Coll-Salvage')
+2019-01-30 17:57:44 0303 Group By UNITID
+2019-01-30 17:57:44      	2 fields found: UNITID, LoadDate, 
+2019-01-30 17:57:44      0 lines fetched
+2019-01-30 17:57:44 0305 RIGHT JOIN(ToBeSold_Units)
+2019-01-30 17:57:44 0306 
+2019-01-30 17:57:44 0307 LOAD
+2019-01-30 17:57:44 0308     UNITID,
+2019-01-30 17:57:44 0309     Count(UNITID) as TruckCount,
+2019-01-30 17:57:44 0310     Category,
+2019-01-30 17:57:44 0311     UStatus, 
+2019-01-30 17:57:44 0312     %Calendar_Key AS LoadDate_Current,
+2019-01-30 17:57:44 0313     Cur_Div_Nbr,
+2019-01-30 17:57:44 0314     LOB,
+2019-01-30 17:57:44 0315     Dossier_LOB,
+2019-01-30 17:57:44 0316     Cur_LOB
+2019-01-30 17:57:44 0317 Resident AllUnits
+2019-01-30 17:57:44 0318 WHERE [%Calendar_Key] = num(Date#(MonthEnd(AddMonths(Today(),-1))))   
+2019-01-30 17:57:44 0319   and wildmatch(LOB ,'Large Container','Small Container','Residential','Other')
+2019-01-30 17:57:44 0320   and wildmatch(Category ,'ASL','Brush Truck','CSL','FEL','MSL','Recycle','REL','R/O','Tractor- 5th Wheel')
+2019-01-30 17:57:44 0321   and wildmatch(UStatus ,'Coll-Salvage')
+2019-01-30 17:57:44 0322 Group By UNITID,Category,
+2019-01-30 17:57:44 0323 UStatus,%Calendar_Key,Cur_Div_Nbr,Dossier_LOB,Cur_LOB,LOB
+2019-01-30 17:57:45      	9 fields found: UNITID, TruckCount, Category, UStatus, LoadDate_Current, Cur_Div_Nbr, LOB, Dossier_LOB, Cur_LOB, 
+2019-01-30 17:57:45      192 lines fetched
+2019-01-30 17:57:45      Joining/Keeping
+2019-01-30 17:57:45 0325 Fact_Table_Temp:
+2019-01-30 17:57:45 0326 LOAD
+2019-01-30 17:57:45 0327     UNITID,
+2019-01-30 17:57:45 0328     TruckCount,
+2019-01-30 17:57:45 0329     Category,
+2019-01-30 17:57:45 0330     UStatus, 
+2019-01-30 17:57:45 0331     IF(LoadDate_Current>LoadDate, Date(LoadDate,'M/D/YYYY'), Date(LoadDate_Current,'M/D/YYYY')) AS SalvageDate,    
+2019-01-30 17:57:45 0332     Cur_Div_Nbr,
+2019-01-30 17:57:45 0333     LOB,
+2019-01-30 17:57:45 0334     Dossier_LOB,
+2019-01-30 17:57:45 0335     Cur_LOB
+2019-01-30 17:57:45 0336 Resident ToBeSold_Units
+2019-01-30 17:57:45      	9 fields found: UNITID, TruckCount, Category, UStatus, SalvageDate, Cur_Div_Nbr, LOB, Dossier_LOB, Cur_LOB, 
+2019-01-30 17:57:45      192 lines fetched
+2019-01-30 17:57:45 0337 Drop table ToBeSold_Units
+2019-01-30 17:57:45 0339 Concatenate(Fact_Table)
+2019-01-30 17:57:45 0340 LOAD distinct
+2019-01-30 17:57:45 0341     'TobeSold_TotalFleetStatus' as Fact_Type,
+2019-01-30 17:57:45 0342     'Total Co Fleet' as ToBeSold_Total,
+2019-01-30 17:57:45 0343     UNITID,
+2019-01-30 17:57:45 0344     TruckCount,
+2019-01-30 17:57:45 0345     Category,
+2019-01-30 17:57:45 0346     UStatus, 
+2019-01-30 17:57:45 0347     IF(((Year(AddMonths(Today(),-1))-Year(SalvageDate))*12 +( num(Month(AddMonths(Today(),-1)))-num(Month(SalvageDate)))+1) = 1, '30 days',
+2019-01-30 17:57:45 0348         IF(((Year(AddMonths(Today(),-1))-Year(SalvageDate))*12 +( num(Month(AddMonths(Today(),-1)))-num(Month(SalvageDate)))+1) = 3, '90 days',
+2019-01-30 17:57:45 0349              IF(((Year(AddMonths(Today(),-1))-Year(SalvageDate))*12 +( num(Month(AddMonths(Today(),-1)))-num(Month(SalvageDate)))+1) = 6,'180 days',
+2019-01-30 17:57:45 0350                       IF(((Year(AddMonths(Today(),-1))-Year(SalvageDate))*12 +( num(Month(AddMonths(Today(),-1)))-num(Month(SalvageDate)))+1) > 6,'180+ days')))) AS SalvageAgeTotal,
+2019-01-30 17:57:45 0351     Cur_Div_Nbr,
+2019-01-30 17:57:45 0352     LOB,
+2019-01-30 17:57:45 0353     Dossier_LOB,
+2019-01-30 17:57:45 0354     Cur_LOB
+2019-01-30 17:57:45 0355 Resident Fact_Table_Temp
+2019-01-30 17:57:45      	11 fields found: Fact_Type, ToBeSold_Total, UNITID, TruckCount, Category, UStatus, SalvageAgeTotal, Cur_Div_Nbr, LOB, Dossier_LOB, Cur_LOB, 
+2019-01-30 17:57:45      234,696 lines fetched
+2019-01-30 17:57:45 0356 Drop table Fact_Table_Temp
+2019-01-30 17:57:45 0365 ToBeSold_Units:
+2019-01-30 17:57:45 0366 LOAD
+2019-01-30 17:57:45 0367     UNITID,
+2019-01-30 17:57:45 0368     MIN(%Calendar_Key) AS LoadDate
+2019-01-30 17:57:45 0369 Resident AllUnits
+2019-01-30 17:57:45 0370 WHERE [%Calendar_Key] < num(Date#(MonthEnd(AddMonths(Today(),-1))))  
+2019-01-30 17:57:45 0371   and wildmatch(UStatus ,'PC-Salvage')
+2019-01-30 17:57:45 0372 Group By UNITID
+2019-01-30 17:57:45      	2 fields found: UNITID, LoadDate, 
+2019-01-30 17:57:45      0 lines fetched
+2019-01-30 17:57:45 0374 RIGHT JOIN(ToBeSold_Units)
+2019-01-30 17:57:45 0375 
+2019-01-30 17:57:45 0376 LOAD
+2019-01-30 17:57:45 0377     UNITID,
+2019-01-30 17:57:45 0378     Count(UNITID) as TruckCount,
+2019-01-30 17:57:45 0379     Category,
+2019-01-30 17:57:45 0380     UStatus,
+2019-01-30 17:57:45 0381     %Calendar_Key AS LoadDate_Current,
+2019-01-30 17:57:45 0382     Cur_Div_Nbr,
+2019-01-30 17:57:45 0383     LOB,
+2019-01-30 17:57:45 0384     Dossier_LOB,
+2019-01-30 17:57:45 0385     Cur_LOB
+2019-01-30 17:57:45 0386 Resident AllUnits
+2019-01-30 17:57:45 0387 WHERE [%Calendar_Key] = num(Date#(MonthEnd(AddMonths(Today(),-1))))   
+2019-01-30 17:57:45 0388   and wildmatch(UStatus ,'PC-Salvage')
+2019-01-30 17:57:45 0389   and wildmatch(Category ,'Articulated Dump','Backhoe','Dirt Compactor','Excavator','Farm Tractor','Forklift','Motor Grader','Motor Scraper','Off Hwy Dump','Skid Steer',
+2019-01-30 17:57:45 0390                           'Tarper','Tipper','Top Pick','Towed Scraper','Track Dozer Dirt','Track Dozer Face', 'Track Type Loader','Tractor-Farm','Trash Compactor',
+2019-01-30 17:57:45 0391                            'Water Truck','Wheel Loader','Landfill Compactor')
+2019-01-30 17:57:45 0392 Group By UNITID,Category,
+2019-01-30 17:57:45 0393 UStatus,%Calendar_Key,Cur_Div_Nbr,Dossier_LOB,Cur_LOB,LOB
+2019-01-30 17:57:45      	9 fields found: UNITID, TruckCount, Category, UStatus, LoadDate_Current, Cur_Div_Nbr, LOB, Dossier_LOB, Cur_LOB, 
+2019-01-30 17:57:45      57 lines fetched
+2019-01-30 17:57:45      Joining/Keeping
+2019-01-30 17:57:45 0395 Fact_Table_Temp:
+2019-01-30 17:57:45 0396 LOAD
+2019-01-30 17:57:45 0397     UNITID,
+2019-01-30 17:57:45 0398     TruckCount,
+2019-01-30 17:57:45 0399     Category,
+2019-01-30 17:57:45 0400     UStatus,
+2019-01-30 17:57:45 0401     IF(LoadDate_Current>LoadDate, Date(LoadDate,'M/D/YYYY'), Date(LoadDate_Current,'M/D/YYYY')) AS SalvageDate,    
+2019-01-30 17:57:45 0402     Cur_Div_Nbr,
+2019-01-30 17:57:45 0403     LOB,
+2019-01-30 17:57:45 0404     Dossier_LOB,
+2019-01-30 17:57:45 0405     Cur_LOB
+2019-01-30 17:57:45 0406 Resident ToBeSold_Units
+2019-01-30 17:57:45      	9 fields found: UNITID, TruckCount, Category, UStatus, SalvageDate, Cur_Div_Nbr, LOB, Dossier_LOB, Cur_LOB, 
+2019-01-30 17:57:45      57 lines fetched
+2019-01-30 17:57:45 0407 Drop table ToBeSold_Units
+2019-01-30 17:57:45 0409 Concatenate(Fact_Table)
+2019-01-30 17:57:45 0410 LOAD distinct
+2019-01-30 17:57:45 0411     'TobeSold_HeavyEquipment' as Fact_Type,
+2019-01-30 17:57:45 0412     'Heavy Equipment' as ToBeSold_HE,
+2019-01-30 17:57:45 0413     UNITID,
+2019-01-30 17:57:45 0414     TruckCount,
+2019-01-30 17:57:45 0415     Category,
+2019-01-30 17:57:45 0416     UStatus,
+2019-01-30 17:57:45 0417     SalvageDate,
+2019-01-30 17:57:45 0418     IF(((Year(AddMonths(Today(),-1))-Year(SalvageDate))*12 +( num(Month(AddMonths(Today(),-1)))-num(Month(SalvageDate)))+1) = 1, '30 days',
+2019-01-30 17:57:45 0419        IF(((Year(AddMonths(Today(),-1))-Year(SalvageDate))*12 +( num(Month(AddMonths(Today(),-1)))-num(Month(SalvageDate)))+1) = 3, '90 days',
+2019-01-30 17:57:45 0420           IF(((Year(AddMonths(Today(),-1))-Year(SalvageDate))*12 +( num(Month(AddMonths(Today(),-1)))-num(Month(SalvageDate)))+1) = 6,'180 days' ,
+2019-01-30 17:57:45 0421               IF(((Year(AddMonths(Today(),-1))-Year(SalvageDate))*12 +( num(Month(AddMonths(Today(),-1)))-num(Month(SalvageDate)))+1) > 6,'180+ days')))) AS SalvageAgeHE,
+2019-01-30 17:57:45 0422     Cur_Div_Nbr,
+2019-01-30 17:57:45 0423     LOB,
+2019-01-30 17:57:45 0424     Dossier_LOB,
+2019-01-30 17:57:45 0425     Cur_LOB
+2019-01-30 17:57:45 0426 Resident Fact_Table_Temp
+2019-01-30 17:57:45      	12 fields found: Fact_Type, ToBeSold_HE, UNITID, TruckCount, Category, UStatus, SalvageDate, SalvageAgeHE, Cur_Div_Nbr, LOB, Dossier_LOB, Cur_LOB, 
+2019-01-30 17:57:45      234,753 lines fetched
+2019-01-30 17:57:45 0427 Drop table Fact_Table_Temp
+2019-01-30 17:57:45 0428 Drop table AllUnits
+2019-01-30 17:57:45 0432 Calendar:
+2019-01-30 17:57:45 0433 LOAD
+2019-01-30 17:57:45 0434     %Calendar_Key,
+2019-01-30 17:57:45 0435     FormattedDate,
+2019-01-30 17:57:45 0436     "Week",
+2019-01-30 17:57:45 0437     "Year",
+2019-01-30 17:57:45 0438     "Month",
+2019-01-30 17:57:45 0439     "Day",
+2019-01-30 17:57:45 0440     "WeekDay",
+2019-01-30 17:57:45 0441     Quarter,
+2019-01-30 17:57:45 0442     MonthYear,
+2019-01-30 17:57:45 0443     "WeekYear",
+2019-01-30 17:57:45 0444     CurYTDFlag,
+2019-01-30 17:57:45 0445     LastYTDFlag,
+2019-01-30 17:57:45 0446     CurQtrFlag,
+2019-01-30 17:57:45 0447     PrevQtrFlag,
+2019-01-30 17:57:45 0448     TwoMonthsPriorFlag,
+2019-01-30 17:57:45 0449     CurMTDFlag,
+2019-01-30 17:57:45 0450     PrevMTDFlag,
+2019-01-30 17:57:45 0451     PrevYMTDFlag,
+2019-01-30 17:57:45 0452     Prev3MTDFlag,
+2019-01-30 17:57:45 0453     Prev13MTDFlag,
+2019-01-30 17:57:45 0454     Prev14MTDFlag,
+2019-01-30 17:57:45 0455     MonthYearTrend,
+2019-01-30 17:57:45 0456     if([%Calendar_Key] = num(Date#(MonthEnd(Addmonths(today(),-1)))),1,0) as CurMonthFlag,
+2019-01-30 17:57:45 0457     if([%Calendar_Key] = num(Date#(MonthEnd(Addmonths(today(),-2)))),1,0) as Prev1MonthFlag,
+2019-01-30 17:57:45 0458     if([%Calendar_Key] = num(Date#(MonthEnd(Addmonths(today(),-3)))),1,0) as Prev2MonthFlag,
+2019-01-30 17:57:45 0459     if([%Calendar_Key] = num(Date#(MonthEnd(Addmonths(today(),-4)))),1,0) as Prev3MonthFlag,
+2019-01-30 17:57:45 0460     if([%Calendar_Key] = num(Date#(MonthEnd(Addmonths(today(),-5)))),1,0) as Prev4MonthFlag,
+2019-01-30 17:57:45 0461     if([%Calendar_Key] = num(Date#(MonthEnd(Addmonths(today(),-6)))),1,0) as Prev5MonthFlag,
+2019-01-30 17:57:45 0462     if([%Calendar_Key] = num(Date#(MonthEnd(Addmonths(today(),-7)))),1,0) as Prev6MonthFlag,
+2019-01-30 17:57:45 0463     if([%Calendar_Key] = num(Date#(MonthEnd(Addmonths(today(),-8)))),1,0) as Prev7MonthFlag,
+2019-01-30 17:57:45 0464     if([%Calendar_Key] = num(Date#(MonthEnd(Addmonths(today(),-9)))),1,0) as Prev8MonthFlag,
+2019-01-30 17:57:45 0465     if([%Calendar_Key] = num(Date#(MonthEnd(Addmonths(today(),-10)))),1,0) as Prev9MonthFlag,
+2019-01-30 17:57:45 0466     if([%Calendar_Key] = num(Date#(MonthEnd(Addmonths(today(),-11)))),1,0) as Prev10MonthFlag,
+2019-01-30 17:57:45 0467     if([%Calendar_Key] = num(Date#(MonthEnd(Addmonths(today(),-12)))),1,0) as Prev11MonthFlag,
+2019-01-30 17:57:45 0468     Month & ': ' & MonthEnd(FormattedDate) as MonthEndDate
+2019-01-30 17:57:45 0469 FROM [lib://Qlik_QVD_Files/Calendar.qvd]
+2019-01-30 17:57:45 0470 (qvd)
+2019-01-30 17:57:45 0471 where [%Calendar_Key] <= num(Date#(MonthEnd(AddMonths(today(), -1)),'M/D/YYYY')) 
+2019-01-30 17:57:45 0472   and [%Calendar_Key] > num(Date#(MonthEnd(AddMonths(today(), -13)),'M/D/YYYY')) 
+2019-01-30 17:57:45 0473   and exists ([%Calendar_Key],[%Calendar_Key])
+2019-01-30 17:57:45      	35 fields found: %Calendar_Key, FormattedDate, Week, Year, Month, Day, WeekDay, Quarter, MonthYear, WeekYear, CurYTDFlag, LastYTDFlag, CurQtrFlag, PrevQtrFlag, TwoMonthsPriorFlag, CurMTDFlag, PrevMTDFlag, PrevYMTDFlag, Prev3MTDFlag, Prev13MTDFlag, Prev14MTDFlag, MonthYearTrend, CurMonthFlag, Prev1MonthFlag, Prev2MonthFlag, Prev3MonthFlag, Prev4MonthFlag, Prev5MonthFlag, Prev6MonthFlag, Prev7MonthFlag, Prev8MonthFlag, Prev9MonthFlag, Prev10MonthFlag, Prev11MonthFlag, MonthEndDate, 
+2019-01-30 17:57:45      12 lines fetched
+2019-01-30 17:57:45 0477 LIB CONNECT TO 'ODS PROD'
+2019-01-30 17:57:47 0479 Unit:
+2019-01-30 17:57:47 0480 LOAD distinct *
+2019-01-30 17:57:47 0481      WHERE exists (UNITID,UNITID)
+2019-01-30 17:57:47 0482 LOAD distinct
+2019-01-30 17:57:47 0483     UNITID,
+2019-01-30 17:57:47 0484     UNITNUMBER,
+2019-01-30 17:57:47 0485     MFGYEAR,
+2019-01-30 17:57:47 0486     FUELTYPEID,
+2019-01-30 17:57:47 0487    
+2019-01-30 17:57:47 0488     Condition as CONDITION
+2019-01-30 17:57:47 0489 FROM [lib://Qlik_QVD_Files/Reusable QVD Files\E_Monthly_Fleet.qvd]
+2019-01-30 17:57:47 0490 (qvd)
+2019-01-30 17:57:47 0491 WHERE wildmatch(%Calendar_Key, num(Date#(MonthEnd(AddMonths(today(), -1)),'M/D/YYYY')))
+2019-01-30 17:57:47      	5 fields found: UNITID, UNITNUMBER, MFGYEAR, FUELTYPEID, CONDITION, 
+2019-01-30 17:57:47      19,542 lines fetched
+2019-01-30 17:57:47 0494 LEFT JOIN(Unit)
+2019-01-30 17:57:47 0495 
+2019-01-30 17:57:47 0496 LOAD distinct ID as FUELTYPEID,
+2019-01-30 17:57:47 0497      NAME as FUELTYPE
+2019-01-30 17:57:47 0498 SQL  SELECT 
+2019-01-30 17:57:47 0499         [ID],
+2019-01-30 17:57:47 0500         [NAME]
+2019-01-30 17:57:47 0501      FROM [ODS].[dbo].[ODS_DOS_FUELTYPE]
+2019-01-30 17:57:47      	2 fields found: FUELTYPEID, FUELTYPE, 
+2019-01-30 17:57:47      10 lines fetched
+2019-01-30 17:57:47      Joining/Keeping
+2019-01-30 17:57:47 0510 Concatenate(Fact_Table)
+2019-01-30 17:57:47 0511 LOAD
+2019-01-30 17:57:47 0512     UNITID,
+2019-01-30 17:57:47 0513     Fact_Type,
+2019-01-30 17:57:47 0514     num(Date#(MonthEnd(DETAILDATE))) as %Calendar_Key,
+2019-01-30 17:57:47 0515     CATEGORY as Category,
+2019-01-30 17:57:47 0516      Gallons,
+2019-01-30 17:57:47 0517     Cur_Div_Nbr,
+2019-01-30 17:57:47 0518     SITEID as SiteID,
+2019-01-30 17:57:47 0519     LOB as Dossier_LOB,
+2019-01-30 17:57:47 0520     FUELTYPE_ALL
+2019-01-30 17:57:47 0521  	
+2019-01-30 17:57:47 0522 FROM [lib://Qlik_QVD_Files/Reusable QVD Files\E_Fact_Gallons.qvd]
+2019-01-30 17:57:47 0523 (qvd) where
+2019-01-30 17:57:47 0524 wildmatch(CATEGORY ,'Articulated Dump','ASL',	'Backhoe',	'Brush Truck',	'CSL ',	'Excavator',	'Farm Tractor',	'FEL',	'Landfill Compactor',	'Lube Trailer',	'Lube Truck',	'Motor Grader'
+2019-01-30 17:57:47 0525 ,	'Motor Scraper',	'MSL',	'R/O',	'Recycle',	'REL',	'Service Truck',	'Skid Steer',	'Support',	'Track Dozer Dirt',	'Track Dozer Face',	'Track Type Loader',	'Tractor- 5th Wheel' 
+2019-01-30 17:57:47 0526 ,	'Trailers',	'Water Truck',	'Wheel Loader')
+2019-01-30 17:57:51      	9 fields found: UNITID, Fact_Type, %Calendar_Key, Category, Gallons, Cur_Div_Nbr, SiteID, Dossier_LOB, FUELTYPE_ALL, 
+2019-01-30 17:57:51      2,815,622 lines fetched
+2019-01-30 17:57:51 0533 Engine_Hrs_Last_Sheet:
+2019-01-30 17:57:51 0534 LOAD distinct 
+2019-01-30 17:57:51 0535 	 'Engine_Hrs_Last_Sheet'	as Fact_Type,
+2019-01-30 17:57:51 0536      UNITID,
+2019-01-30 17:57:51 0537      num(Date#(MonthEnd(READINGDATE))) as %Calendar_Key,
+2019-01-30 17:57:51 0538      SUM(ENGINEHOURS) as Engine_Hrs_ALL
+2019-01-30 17:57:51 0539 FROM Lib://Qlik_QVD_Files/Reusable QVD Files/E_Fact_EngineHours.qvd 
+2019-01-30 17:57:51 0540 (qvd)
+2019-01-30 17:57:51 0541 WHERE num(Date#(MonthEnd(READINGDATE))) <= num(Date#(MonthEnd(AddMonths(today(), -1)),'M/D/YYYY'))
+2019-01-30 17:57:51 0542 GROUP by UNITID,MonthEnd(READINGDATE)
+2019-01-30 17:58:14      	4 fields found: Fact_Type, UNITID, %Calendar_Key, Engine_Hrs_ALL, 
+2019-01-30 17:58:14      247,304 lines fetched
+2019-01-30 17:58:14 0543 LEFT JOIN (Engine_Hrs_Last_Sheet)
+2019-01-30 17:58:14 0544 
+2019-01-30 17:58:14 0545 LOAD
+2019-01-30 17:58:14 0546     UNITID,
+2019-01-30 17:58:14 0547     SiteID,
+2019-01-30 17:58:14 0548     Category,
+2019-01-30 17:58:14 0549    
+2019-01-30 17:58:14 0550     Cur_Div_Nbr,
+2019-01-30 17:58:14 0551    FUELTYPEID,
+2019-01-30 17:58:14 0552     Dossier_LOB
+2019-01-30 17:58:14 0553    
+2019-01-30 17:58:14 0554 FROM [Lib://Qlik_QVD_Files/Reusable QVD Files\E_Monthly_Fleet.qvd] 
+2019-01-30 17:58:14 0555 (qvd)
+2019-01-30 17:58:14      	6 fields found: UNITID, SiteID, Category, Cur_Div_Nbr, FUELTYPEID, Dossier_LOB, 
+2019-01-30 17:58:14      44,481 lines fetched
+2019-01-30 17:58:14      Joining/Keeping
+2019-01-30 17:58:14 0557 LEFT JOIN(Engine_Hrs_Last_Sheet)
+2019-01-30 17:58:14 0558 
+2019-01-30 17:58:14 0559 LOAD distinct ID as FUELTYPEID,
+2019-01-30 17:58:14 0560      NAME as FUELTYPE_ALL
+2019-01-30 17:58:14 0561 SQL  SELECT 
+2019-01-30 17:58:14 0562         [ID],
+2019-01-30 17:58:14 0563         [NAME]
+2019-01-30 17:58:14 0564      FROM [ODS].[dbo].[ODS_DOS_FUELTYPE]
+2019-01-30 17:58:15      	2 fields found: FUELTYPEID, FUELTYPE_ALL, 
+2019-01-30 17:58:15      10 lines fetched
+2019-01-30 17:58:15      Joining/Keeping
+2019-01-30 17:58:15 0568 NoConcatenate
+2019-01-30 17:58:15 0569 Concatenate(Fact_Table)
+2019-01-30 17:58:15 0570 
+2019-01-30 17:58:15 0571 LOAD distinct 
+2019-01-30 17:58:15 0572 Fact_Type,
+2019-01-30 17:58:15 0573 UNITID,
+2019-01-30 17:58:15 0574 %Calendar_Key,
+2019-01-30 17:58:15 0575 Engine_Hrs_ALL,
+2019-01-30 17:58:15 0576 SiteID,
+2019-01-30 17:58:15 0577     Category,
+2019-01-30 17:58:15 0578     Cur_Div_Nbr,
+2019-01-30 17:58:15 0579     Dossier_LOB,
+2019-01-30 17:58:15 0580     FUELTYPE_ALL
+2019-01-30 17:58:15 0581 
+2019-01-30 17:58:15 0582 RESIDENT Engine_Hrs_Last_Sheet
+2019-01-30 17:58:15 0583 where
+2019-01-30 17:58:15 0584 wildmatch(Category ,'Articulated Dump','ASL',	'Backhoe',	'Brush Truck',	'CSL ',	'Excavator',	'Farm Tractor',	'FEL',	'Landfill Compactor',	'Lube Trailer',	'Lube Truck',	'Motor Grader'
+2019-01-30 17:58:15 0585 ,	'Motor Scraper',	'MSL',	'R/O',	'Recycle',	'REL',	'Service Truck',	'Skid Steer',	'Support',	'Track Dozer Dirt',	'Track Dozer Face',	'Track Type Loader',	'Tractor- 5th Wheel' 
+2019-01-30 17:58:15 0586 ,	'Trailers',	'Water Truck',	'Wheel Loader')
+2019-01-30 17:58:16      	9 fields found: Fact_Type, UNITID, %Calendar_Key, Engine_Hrs_ALL, SiteID, Category, Cur_Div_Nbr, Dossier_LOB, FUELTYPE_ALL, 
+2019-01-30 17:58:16      3,029,796 lines fetched
+2019-01-30 17:58:16 0587 Drop table Engine_Hrs_Last_Sheet
+2019-01-30 17:58:16 0589 LOB_Table:
+2019-01-30 17:58:16 0590 LOAD distinct LOB, 
+2019-01-30 17:58:16 0591 
+2019-01-30 17:58:16 0592 if(wildmatch(LOB ,'Large Container','Small Container','Residential','Other'), LOB) as  [Collections LOB],
+2019-01-30 17:58:16 0593 if(wildmatch(LOB ,'Large Container','Small Container','Residential','Other', 'Landfill','Transfer Station' ), LOB) as [Line of Business]    
+2019-01-30 17:58:16 0594  Resident Fact_Table
+2019-01-30 17:58:17      	3 fields found: LOB, Collections LOB, Line of Business, 
+2019-01-30 17:58:17      12 lines fetched
+2019-01-30 17:58:17 0596 Site:
+2019-01-30 17:58:17 0597 
+2019-01-30 17:58:17 0598 LOAD distinct SITEID as SiteID, Doss_Site_Name
+2019-01-30 17:58:17 0599 FROM [lib://Qlik_QVD_Files/Reusable QVD Files\E_Unit.qvd]
+2019-01-30 17:58:17 0600 (qvd)
+2019-01-30 17:58:17 0601 where 
+2019-01-30 17:58:17 0602 
+2019-01-30 17:58:17 0603  not wildmatch(Doss_Site_Name ,'9999*')
+2019-01-30 17:58:17      	2 fields found: SiteID, Doss_Site_Name, 
+2019-01-30 17:58:17      768 lines fetched
+2019-01-30 17:58:17 0606 UStatus_Table:
+2019-01-30 17:58:17 0607 LOAD distinct UStatus, 
+2019-01-30 17:58:17 0608 UStatus as  UStatus_Total,
+2019-01-30 17:58:17 0609 if(wildmatch(UStatus ,'PC-Backup','PC-Frontline','PC-Mothballed','PC-Salvage','PC-Seasonal','PC-Support' ), UStatus) as UStatus_HE 
+2019-01-30 17:58:17 0610  Resident Fact_Table
+2019-01-30 17:58:18      	3 fields found: UStatus, UStatus_Total, UStatus_HE, 
+2019-01-30 17:58:18      23 lines fetched
+2019-01-30 17:58:18 0612 Category_table:
+2019-01-30 17:58:18 0613 LOAD distinct Category, 
+2019-01-30 17:58:18 0614 if(wildmatch(Category ,'ASL','Brush Truck','CSL','FEL','MSL','Recycle','REL','R/O','Tractor- 5th Wheel'), Category) as Category_Total,
+2019-01-30 17:58:18 0615 if(wildmatch(Category ,'Articulated Dump','Backhoe','Dirt Compactor','Excavator','Farm Tractor','Forklift','Motor Grader','Motor Scraper','Off Hwy Dump','Skid Steer',
+2019-01-30 17:58:18 0616                           'Tarper','Tipper','Top Pick','Towed Scraper','Track Dozer Dirt','Track Dozer Face', 'Track Type Loader','Tractor-Farm','Trash Compactor',
+2019-01-30 17:58:18 0617                            'Water Truck','Wheel Loader','Landfill Compactor'), Category) as Category_HE 
+2019-01-30 17:58:18 0618  Resident Fact_Table
+2019-01-30 17:58:20      	3 fields found: Category, Category_Total, Category_HE, 
+2019-01-30 17:58:20      35 lines fetched
+2019-01-30 17:58:20 0623 LIB CONNECT TO 'DWCORE PRODUCTION'
+2019-01-30 17:58:21 0625 Corp_Hier:
+2019-01-30 17:58:21 0626 LOAD distinct *
+2019-01-30 17:58:21 0627 where exists(Cur_Div_Nbr, Cur_Div_Nbr)
+2019-01-30 17:58:21 0628 SQL SELECT "Cur_Region_Nbr" + ' - '+ "Cur_Region_Nm" as [Field Group],
+2019-01-30 17:58:21 0629     "Cur_Area_Nbr" + ' - ' + "Cur_Area_Nm" as [Area Name],
+2019-01-30 17:58:21 0630     
+2019-01-30 17:58:21 0631     "Cur_BU_Nbr" + ' - '+ "Cur_BU_Desc" as [BU Desc],
+2019-01-30 17:58:21 0632     
+2019-01-30 17:58:21 0633     cast(Cur_Div_Nbr as VARCHAR(5)) + ' - ' +"Cur_Div_Nm" as [Division Name],
+2019-01-30 17:58:21 0634     "Cur_Div_Nbr",
+2019-01-30 17:58:21 0635     Cur_Div_SK as REDUCTION
+2019-01-30 17:58:21 0636 FROM DWCORE.dbo."Dim_Corp_Hier"
+2019-01-30 17:58:21 0637 where Cur_Region_Nbr in ('R1','R2', 'R5')
+2019-01-30 17:58:21 0638   and is_Current = 1
+2019-01-30 17:58:21 0639   and Cur_Div_Nbr <> 9999
+2019-01-30 17:58:22      	6 fields found: Field Group, Area Name, BU Desc, Division Name, Cur_Div_Nbr, REDUCTION, 
+2019-01-30 17:58:22      622 lines fetched
+2019-01-30 17:58:22 0645 LET v_Age = 'IF(MFGYEAR <> 0, Only({$<Fact_Type = {"TotalFleetStatus"},CurMonthFlag = {"1"}>} Year - MFGYEAR), 0)'
+2019-01-30 17:58:22 0646 LET v_Age_Average = 'Avg({$<Fact_Type = {"TotalFleetStatus"}>} IF(MFGYEAR = 0,0, Year - MFGYEAR ))'
+2019-01-30 17:58:22 0650 LET v_Cur_Truck_Count = 'sum({$<CurMonthFlag = {1}, Fact_Type = {"TotalFleetStatus"}>} TruckCount)'
+2019-01-30 17:58:22 0651 LET v_Truck_Count = 'sum({$<Fact_Type = {"TotalFleetStatus"}>} TruckCount)'
+2019-01-30 17:58:22 0653 LET v_Truck_Count_KPI = 'sum({$<Fact_Type = {"TotalFleetStatus"}, CalculatedStatus=>} TruckCount)'
+2019-01-30 17:58:22 0654 LET v_NA_PT_Truck_Count = 'sum({$<Fact_Type = {"TotalFleetStatus"}, CalculatedStatus ={"Part Time", "Not Active "} >} TruckCount)'
+2019-01-30 17:58:22 0655 LET v_NA_PT_TruckRatio = 'sum({$<Fact_Type = {"TotalFleetStatus"}, CalculatedStatus ={"Part Time", "Not Active "} >} TruckCount)/sum({$<Fact_Type = {"TotalFleetStatus"}, CalculatedStatus=>} TruckCount)'
+2019-01-30 17:58:22 0659 LET v_Active = 'sum({<Fact_Type = {"TotalFleetStatus"},CalculatedStatus = {"Active"}>}TruckCount)'
+2019-01-30 17:58:22 0660 LET v_NotActive = 'sum({<Fact_Type = {"TotalFleetStatus"},CalculatedStatus = {"Not Active "}>}TruckCount)'
+2019-01-30 17:58:22 0661 LET v_PartTime = 'sum({<Fact_Type = {"TotalFleetStatus"},CalculatedStatus = {"Part Time"}>}TruckCount)'
+2019-01-30 17:58:22 0662 LET v_PossibleError = 'sum({<Fact_Type = {"TotalFleetStatus"},CalculatedStatus = {"Possible Error"}>}TruckCount)'
+2019-01-30 17:58:22 0666 LET v_TotalTruck_Count_HE = 'sum({$<Fact_Type = {"HeavyEquipment"}>} TruckCount)'
+2019-01-30 17:58:22 0679 LET v_Cur_Age_Average = 'Avg({$<CurMonthFlag = {"1"}, Fact_Type = {"TotalFleetStatus"},MonthYear>} IF(MFGYEAR = 0,0, Year - MFGYEAR ))'
+2019-01-30 17:58:22 0683 LET v_Cur_Truck_Count = 'sum({$<CurMonthFlag = {"1"},Fact_Type = {"TotalFleetStatus"}>} TruckCount)'
+2019-01-30 17:58:22 0685 LET v_Cur_Truck_Count_KPI = 'sum({$<CurMonthFlag = {"1"},Fact_Type = {"TotalFleetStatus"}, CalculatedStatus= >} TruckCount)'
+2019-01-30 17:58:22 0686 LET v_Cur_NA_PT_Truck_Count = 'sum({$<CurMonthFlag = {"1"},Fact_Type = {"TotalFleetStatus"}, CalculatedStatus ={"Part Time", "Not Active "}>} TruckCount)'
+2019-01-30 17:58:22 0687 LET v_Cur_NA_PT_TruckRatio = 'sum({$<CurMonthFlag = {"1"},Fact_Type = {"TotalFleetStatus"}, CalculatedStatus ={"Part Time", "Not Active "}>} TruckCount)/sum({$<CurMonthFlag = {"1"},Fact_Type = {"TotalFleetStatus"}, CalculatedStatus= >} TruckCount)'
+2019-01-30 17:58:22 0691 LET v_Cur_Active = 'sum({<CurMonthFlag = {"1"},Fact_Type = {"TotalFleetStatus"},CalculatedStatus = {"Active"}>}TruckCount)'
+2019-01-30 17:58:22 0692 LET v_Cur_NotActive = 'sum({<CurMonthFlag = {"1"},Fact_Type = {"TotalFleetStatus"},CalculatedStatus = {"Not Active "}>}TruckCount)'
+2019-01-30 17:58:22 0693 LET v_Cur_PartTime = 'sum({<CurMonthFlag = {"1"},Fact_Type = {"TotalFleetStatus"},CalculatedStatus = {"Part Time"}>}TruckCount)'
+2019-01-30 17:58:22 0694 LET v_Cur_PossibleError = 'sum({<CurMonthFlag = {"1"},Fact_Type = {"TotalFleetStatus"},CalculatedStatus = {"Possible Error"}>}TruckCount)'
+2019-01-30 17:58:22 0698 LET v_Cur_CollRoutedTruck_Count = 'sum({$<CurMonthFlag = {"1"},Fact_Type = {"TotalFleetStatus"},UStatus = {"Coll-Routed"},MonthYear >} TruckCount)'
+2019-01-30 17:58:22 0699 LET v_Cur_CollMothBallTruck_Count = 'sum({$<CurMonthFlag = {"1"},Fact_Type = {"TotalFleetStatus"},UStatus = {"Coll-Mothballed"},MonthYear >} TruckCount)'
+2019-01-30 17:58:22 0700 LET v_Cur_MothballedRatio = 'sum({$<CurMonthFlag = {"1"},Fact_Type = {"TotalFleetStatus"},UStatus = {"Coll-Mothballed"},MonthYear >} TruckCount)/sum({$<CurMonthFlag = {"1"},Fact_Type = {"TotalFleetStatus"},UStatus = {"Coll-Routed"},MonthYear >} TruckCount)'
+2019-01-30 17:58:22 0701 LET v_Cur_CollSalvageTruck_Count = 'sum({$<CurMonthFlag = {"1"},Fact_Type = {"TotalFleetStatus"},UStatus = {"Coll-Salvage"},MonthYear >} TruckCount)'
+2019-01-30 17:58:22 0702 LET v_Cur_SalvageRatio = 'sum({$<CurMonthFlag = {"1"},Fact_Type = {"TotalFleetStatus"},UStatus = {"Coll-Salvage"},MonthYear >} TruckCount)/sum({$<CurMonthFlag = {"1"},Fact_Type = {"TotalFleetStatus"},UStatus = {"Coll-Routed"},MonthYear >} TruckCount)'
+2019-01-30 17:58:22 0703 LET v_Cur_CollSeasonalTruck_Count = 'sum({$<CurMonthFlag = {"1"},Fact_Type = {"TotalFleetStatus"},UStatus= {"Coll-Seasonal"},MonthYear>} TruckCount)'
+2019-01-30 17:58:22 0704 LET v_Cur_SeasonalRatio = 'sum({$<CurMonthFlag = {"1"},Fact_Type = {"TotalFleetStatus"},UStatus= {"Coll-Seasonal"},MonthYear>} TruckCount)/sum({$<CurMonthFlag = {"1"},Fact_Type = {"TotalFleetStatus"},UStatus = {"Coll-Routed"},MonthYear >} TruckCount)'
+2019-01-30 17:58:22 0705 LET v_Cur_CollSpareTruck_Count = 'sum({$<CurMonthFlag = {"1"},Fact_Type = {"TotalFleetStatus"},UStatus = {"Coll-Spare"},MonthYear>} TruckCount)'
+2019-01-30 17:58:22 0706 LET v_Cur_SpareRatio = 'sum({$<CurMonthFlag = {"1"},Fact_Type = {"TotalFleetStatus"},UStatus = {"Coll-Spare"},MonthYear>} TruckCount)/sum({$<CurMonthFlag = {"1"},Fact_Type = {"TotalFleetStatus"},UStatus = {"Coll-Routed"},MonthYear >} TruckCount)'
+2019-01-30 17:58:22 0707 LET v_Cur_CollSupportTruck_Count = 'sum({$<CurMonthFlag = {"1"},Fact_Type = {"TotalFleetStatus"},UStatus = {"Coll-Support", "Coll- support"},MonthYear>} TruckCount)'
+2019-01-30 17:58:22 0708 LET v_Cur_SupportRatio = 'sum({$<CurMonthFlag = {"1"},Fact_Type = {"TotalFleetStatus"},UStatus = {"Coll-Support", "Coll- support"},MonthYear>} TruckCount)/sum({$<CurMonthFlag = {"1"},Fact_Type = {"TotalFleetStatus"},UStatus = {"Coll-Routed"},MonthYear >} TruckCount)'
+2019-01-30 17:58:22 0709 LET v_Cur_Truck_Count_StatusCount = 'sum({$<CurMonthFlag = {"1"},Fact_Type = {"TotalFleetStatus"} ,MonthYear>} TruckCount)'
+2019-01-30 17:58:22 0713 LET v_Cur_TotalTruck_Count_HE = 'sum({$<CurMonthFlag = {"1"},Fact_Type = {"HeavyEquipment"}>} TruckCount)'
+2019-01-30 17:58:22 0717 LET v_ToBeSold_Truck_Count = 'sum({$<Fact_Type = {"TobeSold_TotalFleetStatus"}>} TruckCount)'
+2019-01-30 17:58:22 0718 LET v_SalvageAge_30_Count_Total = 'sum({$<Fact_Type = {"TobeSold_TotalFleetStatus"},SalvageAgeTotal = {"30 days"},MonthYear>} TruckCount)'
+2019-01-30 17:58:22 0719 LET v_SalvageAge_60_Count_Total = 'sum({$<Fact_Type = {"TobeSold_TotalFleetStatus"},SalvageAgeTotal = {"60 days"},MonthYear>} TruckCount)'
+2019-01-30 17:58:22 0720 LET v_SalvageAge_90_Count_Total = 'sum({$<Fact_Type = {"TobeSold_TotalFleetStatus"},SalvageAgeTotal = {"90 days"},MonthYear>} TruckCount)'
+2019-01-30 17:58:22 0721 LET v_SalvageAge_120_Count_Total = 'sum({$<Fact_Type = {"TobeSold_TotalFleetStatus"},SalvageAgeTotal = {"120 days"},MonthYear>} TruckCount)'
+2019-01-30 17:58:22 0722 LET v_SalvageAge_150_Count_Total = 'sum({$<Fact_Type = {"TobeSold_TotalFleetStatus"},SalvageAgeTotal = {"150 days"},MonthYear>} TruckCount)'
+2019-01-30 17:58:22 0723 LET v_SalvageAge_180_Count_Total = 'sum({$<Fact_Type = {"TobeSold_TotalFleetStatus"},SalvageAgeTotal = {"180 days"},MonthYear>} TruckCount)'
+2019-01-30 17:58:22 0724 LET v_SalvageAge_180_Plus_Count_Total = 'sum({$<Fact_Type = {"TobeSold_TotalFleetStatus"},SalvageAgeTotal = {"180+ days"},MonthYear>} TruckCount)'
+2019-01-30 17:58:22 0726 LET v_SalvageAge_30_Count_HE = 'sum({$<Fact_Type = {"TobeSold_HeavyEquipment"},SalvageAgeHE = {"30 days"},MonthYear>} TruckCount)'
+2019-01-30 17:58:22 0727 LET v_SalvageAge_60_Count_HE = 'sum({$<Fact_Type = {"TobeSold_HeavyEquipment"},SalvageAgeHE = {"60 days"},MonthYear>} TruckCount)'
+2019-01-30 17:58:22 0728 LET v_SalvageAge_90_Count_HE = 'sum({$<Fact_Type = {"TobeSold_HeavyEquipment"},SalvageAgeHE = {"90 days"},MonthYear>} TruckCount)'
+2019-01-30 17:58:22 0729 LET v_SalvageAge_120_Count_HE = 'sum({$<Fact_Type = {"TobeSold_HeavyEquipment"},SalvageAgeHE = {"120 days"},MonthYear>} TruckCount)'
+2019-01-30 17:58:22 0730 LET v_SalvageAge_150_Count_HE = 'sum({$<Fact_Type = {"TobeSold_HeavyEquipment"},SalvageAgeHE = {"150 days"},MonthYear>} TruckCount)'
+2019-01-30 17:58:22 0731 LET v_SalvageAge_180_Count_HE = 'sum({$<Fact_Type = {"TobeSold_HeavyEquipment"},SalvageAgeHE = {"180 days"},MonthYear>} TruckCount)'
+2019-01-30 17:58:22 0732 LET v_SalvageAge_180_Plus_Count_HE = 'sum({$<Fact_Type = {"TobeSold_HeavyEquipment"},SalvageAgeHE = {"180+ days"},MonthYear>} TruckCount)'
+2019-01-30 17:58:22      Creating search index
+2019-01-30 17:58:22      Indexing field: Gallons
+2019-01-30 17:58:22      Search index creation completed successfully
+2019-01-30 17:58:22      Execution finished.
